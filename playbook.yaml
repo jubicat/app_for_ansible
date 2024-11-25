@@ -1,0 +1,9 @@
+# playbook.yml
+---
+- name: Install and Configure PostgreSQL on RHEL with Docker
+  hosts: all
+  become: yes
+
+  roles:
+    - db
+    - docker

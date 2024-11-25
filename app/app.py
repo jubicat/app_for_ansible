@@ -13,8 +13,8 @@ def data():
         conn = psycopg2.connect(
             dbname="myappdb",
             user="postgres",
-            password="Gultac2004",
-            host="db"
+            password="{{ db_password }}",
+            host="localhost"
         )
         cursor = conn.cursor()
         cursor.execute("SELECT * FROM example;")
